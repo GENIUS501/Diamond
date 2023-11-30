@@ -28,7 +28,7 @@ namespace Lienzos
             {
                 Menu frm = new Menu();
                 frm.Show();
-                this.Hide();
+                this.Hide(); 
             }
             catch (Exception ex)
             {
