@@ -44,12 +44,15 @@
     <Compile Include="EBitacora_Movimientos.cs" />
     <Compile Include="EBitacora_Sesiones.cs" />
     <Compile Include="EClientes.cs" />
+    <Compile Include="EDevoluciones.cs" />
     <Compile Include="EPermisos.cs" />
     <Compile Include="EProductos.cs" />
     <Compile Include="ERoles.cs" />
     <Compile Include="ETipo_Productos.cs" />
     <Compile Include="EUsuarios.cs" />
     <Compile Include="EVenta.cs" />
+    <Compile Include="EVentas.cs" />
+    <Compile Include="EVentas_Detalles.cs" />
     <Compile Include="EVenta_detalla.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

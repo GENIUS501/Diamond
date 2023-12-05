@@ -74,6 +74,8 @@
   <ItemGroup>
     <Compile Include="DBitacora_movimientos.cs" />
     <Compile Include="DBitacora_Sesiones.cs" />
+    <Compile Include="DClientes.cs" />
+    <Compile Include="DDevoluciones.cs" />
     <Compile Include="Diamond.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,6 +96,7 @@
     <Compile Include="DRoles.cs" />
     <Compile Include="DTipo_Producto.cs" />
     <Compile Include="DUsuarios.cs" />
+    <Compile Include="DVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="sysdiagrams.cs">
