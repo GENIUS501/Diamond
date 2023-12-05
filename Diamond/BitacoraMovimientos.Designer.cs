@@ -2,6 +2,8 @@
 {
     partial class BitacoraMovimientos
     {
+        private const System.Windows.Forms.ImageLayout none = System.Windows.Forms.ImageLayout.None;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -51,8 +53,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-//            this.pictureBox1.Image = global::Diamond.Properties.Resources.WhatsApp_Image_2023_11_03_at_6_42_26_PM;
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.WhatsApp_Image_2023_11_03_at_6_42_26_PM;
             this.pictureBox1.Location = new System.Drawing.Point(716, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 91);
