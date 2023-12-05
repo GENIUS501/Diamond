@@ -1,4 +1,4 @@
-﻿namespace Lienzos
+﻿namespace Diamond
 {
     partial class MantenimientoProductos
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoProductos));
             this.Grp_Productos = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,9 +51,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.dlgImagen = new System.Windows.Forms.OpenFileDialog();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Grp_Productos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Grp_Productos
@@ -153,7 +157,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.WhatsApp_Image_2023_11_03_at_6_42_26_PM;
+            this.pictureBox1.Image = global::Diamond.Properties.Resources.WhatsApp_Image_2023_11_03_at_6_42_26_PM;
             this.pictureBox1.Location = new System.Drawing.Point(298, 339);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(114, 87);
@@ -170,7 +174,6 @@
             this.ImgProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImgProducto.TabIndex = 79;
             this.ImgProducto.TabStop = false;
-            this.ImgProducto.Click += new System.EventHandler(this.ImgProducto_Click);
             // 
             // btnCargarImagen
             // 
@@ -280,6 +283,14 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = false;
             // 
+            // dlgImagen
+            // 
+            this.dlgImagen.FileName = "openFileDialog1";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // MantenimientoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,6 +308,7 @@
             this.Grp_Productos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,5 +336,7 @@
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.OpenFileDialog dlgImagen;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

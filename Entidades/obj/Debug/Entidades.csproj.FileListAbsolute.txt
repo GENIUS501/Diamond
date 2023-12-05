@@ -4,3 +4,9 @@ C:\Users\Dell\Desktop\Diamond\Entidades\obj\Debug\Entidades.csproj.AssemblyRefer
 C:\Users\Dell\Desktop\Diamond\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Dell\Desktop\Diamond\Entidades\obj\Debug\Entidades.dll
 C:\Users\Dell\Desktop\Diamond\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Entidades\bin\Debug\Entidades.dll
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Entidades\obj\Debug\Entidades.dll
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Entidades\obj\Debug\Entidades.pdb

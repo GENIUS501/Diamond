@@ -1,4 +1,4 @@
-﻿namespace Lienzos
+﻿namespace Diamond
 {
     partial class Menu
     {

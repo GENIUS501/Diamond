@@ -30,3 +30,7 @@ C:\Users\50683\Desktop\Diamond\Diamond\Negocios\bin\Debug\SqlServerTypes\x64\msv
 C:\Users\50683\Desktop\Diamond\Diamond\Negocios\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\50683\Desktop\Diamond\Diamond\Negocios\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 C:\Users\50683\Desktop\Diamond\Diamond\Negocios\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Negocios\obj\Debug\Negocios.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Negocios\obj\Debug\Negocios.dll
+C:\Users\Dell\source\repos\Diamond-Git\Diamond\Negocios\obj\Debug\Negocios.pdb

@@ -1,4 +1,4 @@
-﻿namespace Lienzos
+﻿namespace Diamond
 {
     partial class ListaProductos
     {
@@ -63,6 +63,7 @@
             this.btn_consultar.Text = "Consultar";
             this.btn_consultar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_consultar.UseVisualStyleBackColor = false;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // groupBox1
             // 
@@ -89,6 +90,7 @@
             this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar_nombre.TabIndex = 3;
             this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
             // 
             // label1
             // 
@@ -119,6 +121,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar.TabIndex = 1;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar_codigo
             // 
@@ -150,6 +153,7 @@
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // dat_principal
             // 
@@ -162,18 +166,19 @@
             this.dat_principal.RowHeadersWidth = 51;
             this.dat_principal.Size = new System.Drawing.Size(771, 185);
             this.dat_principal.TabIndex = 87;
+            this.dat_principal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_principal_CellClick);
+            this.dat_principal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.WhatsApp_Image_2023_11_03_at_6_42_26_PM;
+            this.pictureBox1.Image = global::Diamond.Properties.Resources.WhatsApp_Image_2023_11_03_at_6_42_26_PM;
             this.pictureBox1.Location = new System.Drawing.Point(514, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 82);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 93;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_editar
             // 
@@ -190,6 +195,7 @@
             this.btn_editar.Text = "Modificar";
             this.btn_editar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_editar.UseVisualStyleBackColor = false;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_agregar
             // 
@@ -206,6 +212,7 @@
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // ListaProductos
             // 
@@ -224,6 +231,7 @@
             this.Name = "ListaProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Productos";
+            this.Load += new System.EventHandler(this.ListaProductos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).EndInit();
