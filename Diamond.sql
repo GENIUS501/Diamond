@@ -101,3 +101,30 @@ CREATE TABLE Tab_Devoluciones(
 	CONSTRAINT Fk_Devoluciones_Cliente FOREIGN KEY(IdCliente) REFERENCES Tab_Clientes(Numero_Cliente),
 	CONSTRAINT Fk_Devoluciones_Usuario FOREIGN KEY(IdUsuario) REFERENCES Tab_Usuarios(ID_Usuario)
 );
+
+INSERT INTO Tab_Roles(Nombre_Rol)VALUES('Administrador')
+
+INSERT INTO Tab_Permisos (Modulo, Accion, Id_Rol) VALUES
+('Roles', 'Roles', 1),
+('Roles', 'Agregar', 1),
+('Roles', 'Modificar', 1),
+('Roles', 'Eliminar', 1),
+('Roles', 'Consultar', 1),
+('Usuarios', 'Usuarios', 1),
+('Usuarios', 'Agregar', 1),
+('Usuarios', 'Modificar', 1),
+('Usuarios', 'Eliminar', 1),
+('Usuarios', 'Consultar', 1),
+('Clientes', 'Clientes', 1),
+('Clientes', 'Agregar', 1),
+('Clientes', 'Modificar', 1),
+('Clientes', 'Eliminar', 1),
+('Clientes', 'Consultar', 1),
+('Productos', 'Estudiantes', 1),
+('Productos', 'Agregar', 1),
+('Productos', 'Modificar', 1),
+('Productos', 'Eliminar', 1),
+('Productos', 'Consultar', 1)
+
+INSERT INTO Tab_Usuarios (Cedula,Nombre,Primer_Apellido,Segundo_Apellido, Nombre_Usuario, Contrasena,Telefono,Correo,Id_Rol, Estado)
+VALUES ('123456789', 'Albert','Soto','Jiménez', 'Administrador1', 'HVEvEz0I1wRgOshEmHhas82xZwI=',12345678,'1@1.com',1,1)
