@@ -73,7 +73,7 @@
             // Txt_Usuario
             // 
             this.Txt_Usuario.Name = "Txt_Usuario";
-            this.Txt_Usuario.Size = new System.Drawing.Size(0, 16);
+            this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
             // 
             // menuStrip1
             // 
@@ -90,7 +90,7 @@
             this.Salir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(841, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(841, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,15 +102,16 @@
             this.inicioToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inicioToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // reingresarToolStripMenuItem
             // 
             this.reingresarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.reingresarToolStripMenuItem.Name = "reingresarToolStripMenuItem";
-            this.reingresarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reingresarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reingresarToolStripMenuItem.Text = "Reingresar";
+            this.reingresarToolStripMenuItem.Click += new System.EventHandler(this.reingresarToolStripMenuItem_Click);
             // 
             // Procesos
             // 
@@ -121,21 +122,21 @@
             this.Procesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Procesos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Procesos.Name = "Procesos";
-            this.Procesos.Size = new System.Drawing.Size(87, 24);
+            this.Procesos.Size = new System.Drawing.Size(70, 20);
             this.Procesos.Text = "Procesos";
             // 
             // Venta
             // 
             this.Venta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Venta.Name = "Venta";
-            this.Venta.Size = new System.Drawing.Size(242, 26);
+            this.Venta.Size = new System.Drawing.Size(198, 22);
             this.Venta.Text = "Proceso de venta";
             // 
             // Devolucion
             // 
             this.Devolucion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Devolucion.Name = "Devolucion";
-            this.Devolucion.Size = new System.Drawing.Size(242, 26);
+            this.Devolucion.Size = new System.Drawing.Size(198, 22);
             this.Devolucion.Text = "Proceso de devolucion";
             // 
             // Reportes
@@ -149,28 +150,28 @@
             this.Reportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reportes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Reportes.Name = "Reportes";
-            this.Reportes.Size = new System.Drawing.Size(83, 24);
+            this.Reportes.Size = new System.Drawing.Size(69, 20);
             this.Reportes.Text = "Reportes";
             // 
             // Reporte_Cliente
             // 
             this.Reporte_Cliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Reporte_Cliente.Name = "Reporte_Cliente";
-            this.Reporte_Cliente.Size = new System.Drawing.Size(254, 26);
+            this.Reporte_Cliente.Size = new System.Drawing.Size(210, 22);
             this.Reporte_Cliente.Text = "Reporte de clientes";
             // 
             // Reporte_Producto
             // 
             this.Reporte_Producto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Reporte_Producto.Name = "Reporte_Producto";
-            this.Reporte_Producto.Size = new System.Drawing.Size(254, 26);
+            this.Reporte_Producto.Size = new System.Drawing.Size(210, 22);
             this.Reporte_Producto.Text = "Reporte de devoluciones";
             // 
             // Reporte_Venta
             // 
             this.Reporte_Venta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Reporte_Venta.Name = "Reporte_Venta";
-            this.Reporte_Venta.Size = new System.Drawing.Size(254, 26);
+            this.Reporte_Venta.Size = new System.Drawing.Size(210, 22);
             this.Reporte_Venta.Text = "Reporte de ventas";
             // 
             // Mantenimientos
@@ -183,28 +184,30 @@
             this.Mantenimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mantenimientos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Mantenimientos.Name = "Mantenimientos";
-            this.Mantenimientos.Size = new System.Drawing.Size(127, 24);
+            this.Mantenimientos.Size = new System.Drawing.Size(108, 20);
             this.Mantenimientos.Text = "Mantenimientos";
             // 
             // Clientes
             // 
             this.Clientes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(224, 26);
+            this.Clientes.Size = new System.Drawing.Size(180, 22);
             this.Clientes.Text = "Clientes";
+            this.Clientes.Click += new System.EventHandler(this.Clientes_Click);
             // 
             // Productos
             // 
             this.Productos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Productos.Name = "Productos";
-            this.Productos.Size = new System.Drawing.Size(224, 26);
+            this.Productos.Size = new System.Drawing.Size(180, 22);
             this.Productos.Text = "Productos";
+            this.Productos.Click += new System.EventHandler(this.Productos_Click);
             // 
             // Tipo_Productos
             // 
             this.Tipo_Productos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Tipo_Productos.Name = "Tipo_Productos";
-            this.Tipo_Productos.Size = new System.Drawing.Size(224, 26);
+            this.Tipo_Productos.Size = new System.Drawing.Size(180, 22);
             this.Tipo_Productos.Text = "Tipos de Productos";
             this.Tipo_Productos.Click += new System.EventHandler(this.Tipo_Productos_Click);
             // 
@@ -219,35 +222,37 @@
             this.Seguridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Seguridad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Seguridad.Name = "Seguridad";
-            this.Seguridad.Size = new System.Drawing.Size(88, 24);
+            this.Seguridad.Size = new System.Drawing.Size(76, 20);
             this.Seguridad.Text = "Seguridad";
             // 
             // Usuarios
             // 
             this.Usuarios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Usuarios.Name = "Usuarios";
-            this.Usuarios.Size = new System.Drawing.Size(287, 26);
+            this.Usuarios.Size = new System.Drawing.Size(236, 22);
             this.Usuarios.Text = "Usuarios";
+            this.Usuarios.Click += new System.EventHandler(this.Usuarios_Click);
             // 
             // Roles
             // 
             this.Roles.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Roles.Name = "Roles";
-            this.Roles.Size = new System.Drawing.Size(287, 26);
+            this.Roles.Size = new System.Drawing.Size(236, 22);
             this.Roles.Text = "Roles";
+            this.Roles.Click += new System.EventHandler(this.Roles_Click);
             // 
             // Bitacora_Ingresos
             // 
             this.Bitacora_Ingresos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Bitacora_Ingresos.Name = "Bitacora_Ingresos";
-            this.Bitacora_Ingresos.Size = new System.Drawing.Size(287, 26);
+            this.Bitacora_Ingresos.Size = new System.Drawing.Size(236, 22);
             this.Bitacora_Ingresos.Text = "Bitacora de ingresos y salidas";
             // 
             // Bitacora_Movimientos
             // 
             this.Bitacora_Movimientos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Bitacora_Movimientos.Name = "Bitacora_Movimientos";
-            this.Bitacora_Movimientos.Size = new System.Drawing.Size(287, 26);
+            this.Bitacora_Movimientos.Size = new System.Drawing.Size(236, 22);
             this.Bitacora_Movimientos.Text = "Bitacora de movimientos";
             // 
             // acercaDeToolStripMenuItem
@@ -256,7 +261,7 @@
             this.acercaDeToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.acercaDeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
@@ -266,7 +271,7 @@
             this.ayudaToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ayudaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // Salir
@@ -275,12 +280,13 @@
             this.Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(51, 24);
+            this.Salir.Size = new System.Drawing.Size(44, 20);
             this.Salir.Text = "Salir";
+            this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -294,6 +300,7 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

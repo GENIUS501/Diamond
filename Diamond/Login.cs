@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,9 +28,36 @@ namespace Diamond
         {
             try
             {
-                Menu frm = new Menu();
-                frm.Show();
-                this.Hide();
+                NUsuarios Negocios = new NUsuarios();
+                EUsuario Usu = new EUsuario();
+                int Id_Session = 0;
+                string pass = Helper.EncodePassword(string.Concat(this.txt_usuario.Text.ToString(), this.txt_pass.ToString()));
+                Usu = Negocios.Login(this.txt_usuario.Text, pass);
+                if (Usu != null)
+                {
+                    NBitacora_Sesiones Ses = new NBitacora_Sesiones();
+                    EBitacora_Sesiones EntidadSesion = new EBitacora_Sesiones();
+                    EntidadSesion.fecha_hora_ingreso = DateTime.Now;
+                    EntidadSesion.Id_Usuario = Usu.ID_Usuario;
+                    Id_Session = Ses.Agregar(EntidadSesion);
+                    if (Id_Session > 0)
+                    {
+                        this.Hide();
+                        Menu form = new Menu();
+                        form.Idsession = Id_Session;
+                        form.UsuarioLogueado = Usu;
+                        MessageBox.Show("Bienvenido: " + Usu.Nombre_Usuario, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        form.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al ingresar!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error usuario o contraseña invalido!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
