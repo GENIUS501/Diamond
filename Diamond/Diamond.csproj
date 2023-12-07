@@ -93,6 +93,7 @@
     <Compile Include="BitacoraSesiones.Designer.cs">
       <DependentUpon>BitacoraSesiones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="ListaClientes.cs">
       <SubType>Form</SubType>
     </Compile>

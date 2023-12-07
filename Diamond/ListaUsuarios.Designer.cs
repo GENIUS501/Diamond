@@ -56,6 +56,7 @@
             this.dat_principal.RowHeadersWidth = 51;
             this.dat_principal.Size = new System.Drawing.Size(739, 213);
             this.dat_principal.TabIndex = 94;
+            this.dat_principal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_principal_CellClick);
             // 
             // btn_consultar
             // 
@@ -72,6 +73,7 @@
             this.btn_consultar.Text = "Consultar";
             this.btn_consultar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_consultar.UseVisualStyleBackColor = false;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // btn_eliminar
             // 
@@ -88,6 +90,7 @@
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_editar
             // 
@@ -104,6 +107,7 @@
             this.btn_editar.Text = "Modificar";
             this.btn_editar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_editar.UseVisualStyleBackColor = false;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_agregar
             // 
@@ -120,6 +124,7 @@
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // groupBox1
             // 
@@ -176,6 +181,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar.TabIndex = 1;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar_cedula
             // 
@@ -191,6 +197,7 @@
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(130, 22);
             this.txt_nombre.TabIndex = 2;
+            this.txt_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
             // 
             // pictureBox1
             // 
@@ -221,6 +228,7 @@
             this.Name = "ListaUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Usuarios";
+            this.Load += new System.EventHandler(this.ListaUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
