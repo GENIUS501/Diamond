@@ -315,5 +315,41 @@ namespace Diamond
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Bitacora_Movimientos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BitacoraMovimientos frm = new BitacoraMovimientos();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.Usuario = UsuarioLogueado.Nombre_Usuario;
+                // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Bitacora_Ingresos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BitacoraSesiones frm = new BitacoraSesiones();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.Usuariologueado = UsuarioLogueado.Nombre_Usuario;
+                // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -248,6 +248,7 @@
             this.Bitacora_Ingresos.Name = "Bitacora_Ingresos";
             this.Bitacora_Ingresos.Size = new System.Drawing.Size(236, 22);
             this.Bitacora_Ingresos.Text = "Bitacora de ingresos y salidas";
+            this.Bitacora_Ingresos.Click += new System.EventHandler(this.Bitacora_Ingresos_Click);
             // 
             // Bitacora_Movimientos
             // 
@@ -255,6 +256,7 @@
             this.Bitacora_Movimientos.Name = "Bitacora_Movimientos";
             this.Bitacora_Movimientos.Size = new System.Drawing.Size(236, 22);
             this.Bitacora_Movimientos.Text = "Bitacora de movimientos";
+            this.Bitacora_Movimientos.Click += new System.EventHandler(this.Bitacora_Movimientos_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
