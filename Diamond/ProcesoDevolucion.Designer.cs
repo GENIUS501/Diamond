@@ -38,7 +38,7 @@
             this.txt_id = new System.Windows.Forms.TextBox();
             this.btn_Devolucion = new System.Windows.Forms.Button();
             this.dat_principal = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_reimprimir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).BeginInit();
@@ -70,6 +70,7 @@
             this.btn_buscar_id.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar_id.TabIndex = 3;
             this.btn_buscar_id.UseVisualStyleBackColor = true;
+            this.btn_buscar_id.Click += new System.EventHandler(this.btn_buscar_id_Click);
             // 
             // label1
             // 
@@ -100,6 +101,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar.TabIndex = 1;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar_cedula
             // 
@@ -130,6 +132,7 @@
             this.btn_Devolucion.Text = "Realizar devolucion";
             this.btn_Devolucion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Devolucion.UseVisualStyleBackColor = false;
+            this.btn_Devolucion.Click += new System.EventHandler(this.btn_Devolucion_Click);
             // 
             // dat_principal
             // 
@@ -139,21 +142,23 @@
             this.dat_principal.RowHeadersWidth = 51;
             this.dat_principal.Size = new System.Drawing.Size(739, 185);
             this.dat_principal.TabIndex = 77;
+            this.dat_principal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_principal_CellClick);
             // 
-            // button1
+            // btn_reimprimir
             // 
-            this.button1.BackColor = System.Drawing.Color.Beige;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(196, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 26);
-            this.button1.TabIndex = 81;
-            this.button1.Text = "Reimprimir";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_reimprimir.BackColor = System.Drawing.Color.Beige;
+            this.btn_reimprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_reimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reimprimir.Image = ((System.Drawing.Image)(resources.GetObject("btn_reimprimir.Image")));
+            this.btn_reimprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_reimprimir.Location = new System.Drawing.Point(196, 127);
+            this.btn_reimprimir.Name = "btn_reimprimir";
+            this.btn_reimprimir.Size = new System.Drawing.Size(113, 26);
+            this.btn_reimprimir.TabIndex = 81;
+            this.btn_reimprimir.Text = "Reimprimir";
+            this.btn_reimprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reimprimir.UseVisualStyleBackColor = false;
+            this.btn_reimprimir.Click += new System.EventHandler(this.btn_reimprimir_Click);
             // 
             // pictureBox1
             // 
@@ -172,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(761, 392);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_reimprimir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Devolucion);
@@ -181,6 +186,7 @@
             this.Name = "ProcesoDevolucion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proceso Devolucion";
+            this.Load += new System.EventHandler(this.ProcesoDevolucion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).EndInit();
@@ -201,6 +207,6 @@
         private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Button btn_Devolucion;
         private System.Windows.Forms.DataGridView dat_principal;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_reimprimir;
     }
 }

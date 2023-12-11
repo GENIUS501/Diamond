@@ -114,6 +114,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // pictureBox1
             // 
@@ -139,6 +140,7 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // label10
             // 
@@ -208,6 +210,7 @@
             this.btn_add_cliente.Size = new System.Drawing.Size(28, 21);
             this.btn_add_cliente.TabIndex = 5;
             this.btn_add_cliente.UseVisualStyleBackColor = true;
+            this.btn_add_cliente.Click += new System.EventHandler(this.btn_add_cliente_Click);
             // 
             // lbl_cliente
             // 
@@ -236,6 +239,7 @@
             this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar_nombre.TabIndex = 3;
             this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
             // 
             // btn_buscar_codigo
             // 
@@ -246,6 +250,7 @@
             this.btn_buscar_codigo.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar_codigo.TabIndex = 1;
             this.btn_buscar_codigo.UseVisualStyleBackColor = true;
+            this.btn_buscar_codigo.Click += new System.EventHandler(this.btn_buscar_codigo_Click);
             // 
             // label5
             // 
@@ -287,6 +292,8 @@
             this.lst_productos.TabIndex = 7;
             this.lst_productos.UseCompatibleStateImageBehavior = false;
             this.lst_productos.View = System.Windows.Forms.View.Details;
+            this.lst_productos.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.lst_productos_ItemCheck);
+            this.lst_productos.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lst_productos_ItemChecked);
             // 
             // columnHeader9
             // 
@@ -319,6 +326,7 @@
             this.dat_resultado.RowHeadersWidth = 51;
             this.dat_resultado.Size = new System.Drawing.Size(578, 103);
             this.dat_resultado.TabIndex = 6;
+            this.dat_resultado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_resultado_CellClick);
             // 
             // label6
             // 
@@ -381,6 +389,7 @@
             this.txt_impuesto.Name = "txt_impuesto";
             this.txt_impuesto.Size = new System.Drawing.Size(47, 22);
             this.txt_impuesto.TabIndex = 8;
+            this.txt_impuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_impuesto_KeyPress);
             // 
             // ProcesoVentas
             // 
@@ -393,6 +402,7 @@
             this.Name = "ProcesoVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proceso Ventas";
+            this.Load += new System.EventHandler(this.ProcesoVentas_Load);
             this.grp_venta.ResumeLayout(false);
             this.grp_venta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

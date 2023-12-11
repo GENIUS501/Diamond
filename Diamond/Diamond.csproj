@@ -93,6 +93,11 @@
     <Compile Include="BitacoraSesiones.Designer.cs">
       <DependentUpon>BitacoraSesiones.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="ListaClientes.cs">
       <SubType>Form</SubType>
@@ -203,6 +208,12 @@
     <Compile Include="ReporteVentas.Designer.cs">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visor_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Factura.Designer.cs">
+      <DependentUpon>Visor_Factura.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +226,7 @@
     <EmbeddedResource Include="BitacoraSesiones.resx">
       <DependentUpon>BitacoraSesiones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Factura.rdlc" />
     <EmbeddedResource Include="ListaClientes.resx">
       <DependentUpon>ListaClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +282,20 @@
     <EmbeddedResource Include="ReporteVentas.resx">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visor_Factura.resx">
+      <DependentUpon>Visor_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

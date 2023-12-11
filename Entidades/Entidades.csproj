@@ -47,6 +47,7 @@
     <Compile Include="EDevoluciones.cs" />
     <Compile Include="EPermisos.cs" />
     <Compile Include="EProductos.cs" />
+    <Compile Include="EReporte_Ventas_Detalles.cs" />
     <Compile Include="ERoles.cs" />
     <Compile Include="ETipo_Productos.cs" />
     <Compile Include="EUsuarios.cs" />
