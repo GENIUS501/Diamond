@@ -351,5 +351,59 @@ namespace Diamond
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Venta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProcesoVentas frm = new ProcesoVentas();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                frm.Nombre_Usuario = UsuarioLogueado.Nombre_Usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Devolucion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProcesoDevolucion frm = new ProcesoDevolucion();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Reporte_Venta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReporteVentas frm = new ReporteVentas();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.Usuario = UsuarioLogueado.Nombre_Usuario;
+                // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

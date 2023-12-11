@@ -131,6 +131,7 @@
             this.Venta.Name = "Venta";
             this.Venta.Size = new System.Drawing.Size(198, 22);
             this.Venta.Text = "Proceso de venta";
+            this.Venta.Click += new System.EventHandler(this.Venta_Click);
             // 
             // Devolucion
             // 
@@ -138,6 +139,7 @@
             this.Devolucion.Name = "Devolucion";
             this.Devolucion.Size = new System.Drawing.Size(198, 22);
             this.Devolucion.Text = "Proceso de devolucion";
+            this.Devolucion.Click += new System.EventHandler(this.Devolucion_Click);
             // 
             // Reportes
             // 
@@ -174,6 +176,7 @@
             this.Reporte_Venta.Name = "Reporte_Venta";
             this.Reporte_Venta.Size = new System.Drawing.Size(210, 22);
             this.Reporte_Venta.Text = "Reporte de ventas";
+            this.Reporte_Venta.Click += new System.EventHandler(this.Reporte_Venta_Click);
             // 
             // Mantenimientos
             // 
