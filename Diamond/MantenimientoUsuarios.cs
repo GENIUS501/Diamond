@@ -59,6 +59,16 @@ namespace Diamond
                     errorProvider1.SetError(this.txt_nombre, "Debe ingresar el nombre");
                     ok = true;
                 }
+                if (this.txt_apellido1.Text == "")
+                {
+                    errorProvider1.SetError(this.txt_apellido1, "Debe ingresar el primer apellido");
+                    ok = true;
+                }
+                if (this.txt_apellido2.Text == "")
+                {
+                    errorProvider1.SetError(this.txt_apellido2, "Debe ingresar el segundo apellido");
+                    ok = true;
+                }
                 if (this.txt_correo.Text == "")
                 {
                     errorProvider1.SetError(this.txt_correo, "Debe ingresar el correo");
@@ -138,6 +148,8 @@ namespace Diamond
             {
                 errorProvider1.SetError(txt_cedula, "");
                 errorProvider1.SetError(txt_nombre, "");
+                errorProvider1.SetError(txt_apellido1,"");
+                errorProvider1.SetError(txt_apellido2, "");
                 errorProvider1.SetError(txt_clave, "");
                 errorProvider1.SetError(txt_cclave, "");
                 errorProvider1.SetError(txt_correo, "");

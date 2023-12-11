@@ -268,6 +268,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btnAceptar
             // 
@@ -282,6 +283,7 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // dlgImagen
             // 
@@ -304,6 +306,7 @@
             this.Name = "MantenimientoProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento Productos";
+            this.Load += new System.EventHandler(this.Mantenimiento_Productos_Load);
             this.Grp_Productos.ResumeLayout(false);
             this.Grp_Productos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
