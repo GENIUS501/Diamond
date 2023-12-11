@@ -220,9 +220,11 @@
     <EmbeddedResource Include="Ayuda.resx">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BitacoraMovimientos.rdlc" />
     <EmbeddedResource Include="BitacoraMovimientos.resx">
       <DependentUpon>BitacoraMovimientos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BitacoraSesiones.rdlc" />
     <EmbeddedResource Include="BitacoraSesiones.resx">
       <DependentUpon>BitacoraSesiones.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +275,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCliente.rdlc" />
     <EmbeddedResource Include="ReporteClientes.resx">
       <DependentUpon>ReporteClientes.cs</DependentUpon>
     </EmbeddedResource>

@@ -109,7 +109,7 @@
             // 
             this.reingresarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.reingresarToolStripMenuItem.Name = "reingresarToolStripMenuItem";
-            this.reingresarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reingresarToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.reingresarToolStripMenuItem.Text = "Reingresar";
             this.reingresarToolStripMenuItem.Click += new System.EventHandler(this.reingresarToolStripMenuItem_Click);
             // 
@@ -159,6 +159,7 @@
             this.Reporte_Cliente.Name = "Reporte_Cliente";
             this.Reporte_Cliente.Size = new System.Drawing.Size(210, 22);
             this.Reporte_Cliente.Text = "Reporte de clientes";
+            this.Reporte_Cliente.Click += new System.EventHandler(this.Reporte_Cliente_Click);
             // 
             // Reporte_Producto
             // 
@@ -191,7 +192,7 @@
             // 
             this.Clientes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(180, 22);
+            this.Clientes.Size = new System.Drawing.Size(179, 22);
             this.Clientes.Text = "Clientes";
             this.Clientes.Click += new System.EventHandler(this.Clientes_Click);
             // 
@@ -199,7 +200,7 @@
             // 
             this.Productos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Productos.Name = "Productos";
-            this.Productos.Size = new System.Drawing.Size(180, 22);
+            this.Productos.Size = new System.Drawing.Size(179, 22);
             this.Productos.Text = "Productos";
             this.Productos.Click += new System.EventHandler(this.Productos_Click);
             // 
@@ -207,7 +208,7 @@
             // 
             this.Tipo_Productos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Tipo_Productos.Name = "Tipo_Productos";
-            this.Tipo_Productos.Size = new System.Drawing.Size(180, 22);
+            this.Tipo_Productos.Size = new System.Drawing.Size(179, 22);
             this.Tipo_Productos.Text = "Tipos de Productos";
             this.Tipo_Productos.Click += new System.EventHandler(this.Tipo_Productos_Click);
             // 

@@ -297,5 +297,23 @@ namespace Diamond
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Reporte_Cliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReporteClientes frm = new ReporteClientes();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                frm.Usuario = UsuarioLogueado.Nombre_Usuario;
+                // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
