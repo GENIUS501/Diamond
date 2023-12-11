@@ -29,40 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteVentas));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_fecha = new System.Windows.Forms.Button();
             this.txt_fecha_fin = new System.Windows.Forms.DateTimePicker();
             this.txt_fecha_ini = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_buscar_fact = new System.Windows.Forms.Button();
             this.txtnumerofactura = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(12, 141);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(765, 274);
-            this.reportViewer1.TabIndex = 109;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btn_fecha);
             this.groupBox1.Controls.Add(this.txt_fecha_fin);
             this.groupBox1.Controls.Add(this.txt_fecha_ini);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_buscar_fact);
             this.groupBox1.Controls.Add(this.txtnumerofactura);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -71,16 +61,6 @@
             this.groupBox1.TabIndex = 107;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros de Búsqueda";
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(316, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 20);
-            this.button2.TabIndex = 62;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // btn_fecha
             // 
@@ -138,15 +118,16 @@
             this.label2.TabIndex = 51;
             this.label2.Text = "Numero de factura";
             // 
-            // button1
+            // btn_buscar_fact
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(125, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 50;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_buscar_fact.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_fact.BackgroundImage")));
+            this.btn_buscar_fact.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_fact.Location = new System.Drawing.Point(125, 50);
+            this.btn_buscar_fact.Name = "btn_buscar_fact";
+            this.btn_buscar_fact.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_fact.TabIndex = 50;
+            this.btn_buscar_fact.UseVisualStyleBackColor = true;
+            this.btn_buscar_fact.Click += new System.EventHandler(this.btn_buscar_fact_click);
             // 
             // txtnumerofactura
             // 
@@ -166,7 +147,15 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 108;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Lienzos.ReporteFacturas.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 134);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(776, 304);
+            this.reportViewer1.TabIndex = 109;
             // 
             // ReporteVentas
             // 
@@ -181,6 +170,7 @@
             this.Name = "ReporteVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteVentas";
+            this.Load += new System.EventHandler(this.ReporteVentas_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -189,18 +179,16 @@
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_buscar_fact;
         private System.Windows.Forms.MaskedTextBox txtnumerofactura;
         private System.Windows.Forms.Button btn_fecha;
         private System.Windows.Forms.DateTimePicker txt_fecha_fin;
         private System.Windows.Forms.DateTimePicker txt_fecha_ini;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
