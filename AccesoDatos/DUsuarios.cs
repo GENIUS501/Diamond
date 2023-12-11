@@ -22,10 +22,13 @@ namespace AccesoDatos
                 using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                 {
                     Tab_Usuarios Objbd = new Tab_Usuarios();
+                    Objbd.Cedula= obj.Cedula;
                     Objbd.Nombre = obj.Nombre;
                     Objbd.Nombre_Usuario = obj.Nombre_Usuario;
                     Objbd.Primer_Apellido = obj.Primer_Apellido;
                     Objbd.Segundo_Apellido = obj.Segundo_Apellido;
+                    Objbd.Correo = obj.Correo;
+                    Objbd.Telefono = obj.Telefono;
                     //Objbd.Genero = obj.Genero;
                     Objbd.Id_Rol = obj.Id_Rol;
                     Objbd.Estado = 1;
