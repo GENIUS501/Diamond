@@ -1,4 +1,5 @@
 ﻿using Entidades;
+using Microsoft.Reporting.WinForms;
 using Negocios;
 using System;
 using System.Collections.Generic;
@@ -179,7 +180,41 @@ namespace Diamond
 
         private void btn_reimprimir_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                NVentas Negocios = new NVentas();
+                NCliente NegociosClientes = new NCliente();
+                NUsuarios NegociosUsuarios = new NUsuarios();
+                var datasource = Negocios.Mostrar().Select(x => new
+                {
+                    NumeroFactura = x.Numero_factura,
+                    Nombre = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Nombre,
+                    PrimerApellido = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Primer_Apellido,
+                    SegundoApellido = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Segundo_Apellido,
+                    Cedula = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Cedula,
+                    Direccion = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Direccion,
+                    Telefono = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Telefono,
+                    Correo = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Correo,
+                    TipoVenta = x.Tipo_pago,
+                    Monto = x.Total,
+                    Usuario = NegociosUsuarios.Mostrar().Where(c=>c.ID_Usuario==x.ID_Usuario).FirstOrDefault().Nombre_Usuario
+                }).Where(x=>x.NumeroFactura==valorcelda).FirstOrDefault();
+                var Reporte = Negocios.MostrarDetalle().Where(x => x.IdVenta == valorcelda).ToList();
+                Visor_Factura frm = new Visor_Factura();
+                frm.Num_Fact = valorcelda.ToString();
+                frm.Usuario = datasource.Usuario;
+                frm.ListaFina = Reporte;
+                frm.Total = datasource.Monto.ToString();
+                frm.Cliente = datasource.Nombre+" "+datasource.PrimerApellido+" "+datasource.SegundoApellido;
+                frm.Cantidad_Lineas = Reporte.Count().ToString();
+                frm.TipoPago = datasource.TipoVenta.ToString();
+                frm.MdiParent = this.MdiParent;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

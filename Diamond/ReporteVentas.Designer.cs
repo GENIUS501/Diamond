@@ -71,6 +71,7 @@
             this.btn_fecha.Size = new System.Drawing.Size(25, 20);
             this.btn_fecha.TabIndex = 61;
             this.btn_fecha.UseVisualStyleBackColor = true;
+            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
             // 
             // txt_fecha_fin
             // 
@@ -170,7 +171,7 @@
             this.Name = "ReporteVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteVentas";
-            this.Load += new System.EventHandler(this.ReporteVentas_Load_1);
+            this.Load += new System.EventHandler(this.ReporteVentas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

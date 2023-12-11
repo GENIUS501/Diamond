@@ -22,7 +22,7 @@ namespace Diamond
             InitializeComponent();
         }
 
-        private void ReporteVentas_Load_1(object sender, EventArgs e)
+        private void ReporteVentas_Load(object sender, EventArgs e)
         {
             try
             {
@@ -86,6 +86,42 @@ namespace Diamond
                     reportViewer1.LocalReport.SetParameters(parameters);
                     this.reportViewer1.RefreshReport();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_fecha_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NVentas Negocios = new NVentas();
+                NCliente NegociosClientes = new NCliente();
+                var FechaIni = Convert.ToDateTime(this.txt_fecha_ini.Text);
+                var FechaFin = Convert.ToDateTime(this.txt_fecha_fin.Text);
+                var datasource = Negocios.Mostrar().Where(d => d.Fecha_venta >= FechaIni && d.Fecha_venta <= FechaFin).Select(x => new
+                {
+                    NumeroFactura = x.Numero_factura,
+                    Nombre = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Nombre,
+                    PrimerApellido = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Primer_Apellido,
+                    SegundoApellido = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Segundo_Apellido,
+                    Cedula = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Cedula,
+                    Direccion = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Direccion,
+                    Telefono = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Telefono,
+                    Correo = NegociosClientes.Mostrar().Where(c => c.Numero_Cliente == x.ID_Cliente).FirstOrDefault().Correo,
+                    TipoVenta = x.Tipo_pago,
+                    Monto = x.Total
+                }).ToList();
+                ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
+                this.reportViewer1.LocalReport.DataSources.Clear();
+                this.reportViewer1.LocalReport.DataSources.Add(Rds);
+                ReportParameter[] parameters = new ReportParameter[2];
+                parameters[0] = new ReportParameter("Usuario", Usuario);
+                parameters[1] = new ReportParameter("Fecha", DateTime.Now.ToString());
+                reportViewer1.LocalReport.SetParameters(parameters);
+                this.reportViewer1.RefreshReport();
             }
             catch (Exception ex)
             {

@@ -162,6 +162,30 @@ namespace AccesoDatos
                 throw ex;
             }
         }
+        public List<EReporte_Ventas_Detalles> MostrarDetalle()
+        {
+            try
+            {
+                List<EReporte_Ventas_Detalles> Lista = new List<EReporte_Ventas_Detalles>();
+                DProductos DatosProductos = new DProductos();
+                var Objbd = db.Tab_Venta_detallada.ToList();
+                Lista = Objbd.Select(s => new EReporte_Ventas_Detalles
+                {
+                    CodigoProducto = DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().ID_Producto.ToString(),
+                    NombreProducto = DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().Nombre,
+                    Costo = double.Parse(DatosProductos.Mostrar().Where(x => x.ID_Producto == s.ID_Producto).FirstOrDefault().Precio.ToString()),
+                    ID = s.ID_Producto,
+                    IdVenta = s.Numero_factura,
+                    // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,
+                }).ToList();
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
         #endregion
     }
 }
