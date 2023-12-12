@@ -22,7 +22,7 @@ namespace AccesoDatos
                 using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                 {
                     Tab_Usuarios Objbd = new Tab_Usuarios();
-                    Objbd.Cedula= obj.Cedula;
+                    Objbd.Cedula = obj.Cedula;
                     Objbd.Nombre = obj.Nombre;
                     Objbd.Nombre_Usuario = obj.Nombre_Usuario;
                     Objbd.Primer_Apellido = obj.Primer_Apellido;
@@ -74,6 +74,9 @@ namespace AccesoDatos
                     Objbd.Segundo_Apellido = obj.Segundo_Apellido;
                     //Objbd.Genero = obj.Genero;
                     Objbd.Id_Rol = obj.Id_Rol;
+                    Objbd.Correo = obj.Correo;
+                    Objbd.Telefono = obj.Telefono;
+                    Objbd.Cedula = obj.Cedula;
                     Objbd.Estado = 1;
                     if (obj.Contrasena == "********")
                     {
@@ -155,7 +158,10 @@ namespace AccesoDatos
                     //Genero = x.Genero,
                     Id_Rol = x.Id_Rol,
                     Estado = x.Estado,
-                    Contrasena = x.Contrasena
+                    Contrasena = x.Contrasena,
+                    Telefono = x.Telefono,
+                    Cedula = x.Cedula,
+                    Correo = x.Correo
                 }).ToList();
                 return Lista;
             }
