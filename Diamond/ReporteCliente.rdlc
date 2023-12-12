@@ -17,8 +17,8 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Identificacion">
-          <DataField>Identificacion</DataField>
+        <Field Name="Cedula">
+          <DataField>Cedula</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Nombre">
@@ -48,7 +48,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AmorPropio\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Dell\source\repos\Diamond-Git\Diamond\Diamond\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>Clientes</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -98,7 +98,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Identificacion</Value>
+                                  <Value>Cedula</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -306,21 +306,21 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Identificacion">
+                        <Textbox Name="Cedula">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Identificacion.Value</Value>
+                                  <Value>=Fields!Cedula.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Identificacion</rd:DefaultName>
+                          <rd:DefaultName>Cedula</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -332,6 +332,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

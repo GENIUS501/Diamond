@@ -1722,7 +1722,7 @@ namespace Lienzos {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ClientesDataTable : global::System.Data.TypedTableBase<ClientesRow> {
             
-            private global::System.Data.DataColumn columnIdentificacion;
+            private global::System.Data.DataColumn columnCedula;
             
             private global::System.Data.DataColumn columnNombre;
             
@@ -1771,9 +1771,9 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IdentificacionColumn {
+            public global::System.Data.DataColumn CedulaColumn {
                 get {
-                    return this.columnIdentificacion;
+                    return this.columnCedula;
                 }
             }
             
@@ -1862,10 +1862,10 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientesRow AddClientesRow(string Identificacion, string Nombre, string Primer_Apellido, string Segundo_Apellido, string Direccion, string Telefono, string Correo) {
+            public ClientesRow AddClientesRow(string Cedula, string Nombre, string Primer_Apellido, string Segundo_Apellido, string Direccion, string Telefono, string Correo) {
                 ClientesRow rowClientesRow = ((ClientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Identificacion,
+                        Cedula,
                         Nombre,
                         Primer_Apellido,
                         Segundo_Apellido,
@@ -1894,7 +1894,7 @@ namespace Lienzos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnIdentificacion = base.Columns["Identificacion"];
+                this.columnCedula = base.Columns["Cedula"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnPrimer_Apellido = base.Columns["Primer_Apellido"];
                 this.columnSegundo_Apellido = base.Columns["Segundo_Apellido"];
@@ -1906,8 +1906,8 @@ namespace Lienzos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnIdentificacion = new global::System.Data.DataColumn("Identificacion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIdentificacion);
+                this.columnCedula = new global::System.Data.DataColumn("Cedula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCedula);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
                 this.columnPrimer_Apellido = new global::System.Data.DataColumn("Primer_Apellido", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3132,17 +3132,17 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Identificacion {
+            public string Cedula {
                 get {
                     try {
-                        return ((string)(this[this.tableClientes.IdentificacionColumn]));
+                        return ((string)(this[this.tableClientes.CedulaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Identificacion\' de la tabla \'Clientes\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cedula\' de la tabla \'Clientes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableClientes.IdentificacionColumn] = value;
+                    this[this.tableClientes.CedulaColumn] = value;
                 }
             }
             
@@ -3244,14 +3244,14 @@ namespace Lienzos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsIdentificacionNull() {
-                return this.IsNull(this.tableClientes.IdentificacionColumn);
+            public bool IsCedulaNull() {
+                return this.IsNull(this.tableClientes.CedulaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetIdentificacionNull() {
-                this[this.tableClientes.IdentificacionColumn] = global::System.Convert.DBNull;
+            public void SetCedulaNull() {
+                this[this.tableClientes.CedulaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

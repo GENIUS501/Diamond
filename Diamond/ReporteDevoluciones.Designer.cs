@@ -49,7 +49,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(12, 142);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(776, 274);
+            this.reportViewer1.Size = new System.Drawing.Size(776, 296);
             this.reportViewer1.TabIndex = 112;
             // 
             // pictureBox1
