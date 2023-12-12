@@ -32,7 +32,6 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_fecha = new System.Windows.Forms.Button();
             this.txt_fecha_fin = new System.Windows.Forms.DateTimePicker();
             this.txt_fecha_ini = new System.Windows.Forms.DateTimePicker();
@@ -66,7 +65,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btn_fecha);
             this.groupBox1.Controls.Add(this.txt_fecha_fin);
             this.groupBox1.Controls.Add(this.txt_fecha_ini);
@@ -82,16 +80,6 @@
             this.groupBox1.TabIndex = 110;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros de Búsqueda";
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(291, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 20);
-            this.button2.TabIndex = 62;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // btn_fecha
             // 
@@ -200,6 +188,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox txtnumerofactura;
-        private System.Windows.Forms.Button button2;
     }
 }
