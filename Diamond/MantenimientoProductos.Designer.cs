@@ -183,6 +183,7 @@
             this.btnCargarImagen.TabIndex = 78;
             this.btnCargarImagen.Text = "...";
             this.btnCargarImagen.UseVisualStyleBackColor = true;
+            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
             // 
             // label1
             // 
@@ -307,6 +308,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento Productos";
             this.Load += new System.EventHandler(this.Mantenimiento_Productos_Load);
+            this.Click += new System.EventHandler(this.Mantenimiento_Productos_Load);
             this.Grp_Productos.ResumeLayout(false);
             this.Grp_Productos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
