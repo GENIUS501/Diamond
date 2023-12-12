@@ -26,6 +26,8 @@ namespace AccesoDatos
                     Objbd.Nombre = obj.Nombre;
                     Objbd.Descripcion = obj.Descripcion;
                     Objbd.Precio = obj.Precio;
+                    Objbd.Cantidad = obj.Cantidad;
+                    Objbd.Imagen = obj.Imagen;
                     db.Tab_Productos.Add(Objbd);
 
                     int Resultado = db.SaveChanges();
@@ -67,7 +69,9 @@ namespace AccesoDatos
                     ID_Tipo_Producto = x.ID_Tipo_Producto,
                     Nombre = x.Nombre,
                     Descripcion = x.Descripcion,
-                    Precio = x.Precio
+                    Precio = x.Precio,
+                    Cantidad = x.Cantidad,
+                    Imagen = x.Imagen
                 }).ToList();
                 return Lista;
             }
@@ -91,6 +95,8 @@ namespace AccesoDatos
                     Objbd.Nombre = obj.Nombre;
                     Objbd.Descripcion = obj.Descripcion;
                     Objbd.Precio = obj.Precio;
+                    Objbd.Cantidad = obj.Cantidad;
+                    Objbd.Imagen = obj.Imagen;
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();
                     if (Resultado > 0)
