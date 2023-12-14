@@ -45,10 +45,10 @@
             this.cbo_rol = new System.Windows.Forms.ComboBox();
             this.txt_cclave = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_user = new System.Windows.Forms.TextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_clave = new System.Windows.Forms.TextBox();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.txt_user = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,10 +77,10 @@
             this.groupBox1.Controls.Add(this.cbo_rol);
             this.groupBox1.Controls.Add(this.txt_cclave);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txt_user);
+            this.groupBox1.Controls.Add(this.txt_nombre);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txt_clave);
-            this.groupBox1.Controls.Add(this.txt_nombre);
+            this.groupBox1.Controls.Add(this.txt_user);
             this.groupBox1.Controls.Add(this.Nombre);
             this.groupBox1.Controls.Add(this.txt_cedula);
             this.groupBox1.Controls.Add(this.label1);
@@ -220,13 +220,13 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Nombre";
             // 
-            // txt_user
+            // txt_nombre
             // 
-            this.txt_user.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_user.Location = new System.Drawing.Point(161, 73);
-            this.txt_user.Name = "txt_user";
-            this.txt_user.Size = new System.Drawing.Size(159, 22);
-            this.txt_user.TabIndex = 4;
+            this.txt_nombre.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_nombre.Location = new System.Drawing.Point(161, 73);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(159, 22);
+            this.txt_nombre.TabIndex = 4;
             // 
             // label6
             // 
@@ -246,12 +246,12 @@
             this.txt_clave.Size = new System.Drawing.Size(148, 22);
             this.txt_clave.TabIndex = 7;
             // 
-            // txt_nombre
+            // txt_user
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(6, 221);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(148, 22);
-            this.txt_nombre.TabIndex = 1;
+            this.txt_user.Location = new System.Drawing.Point(6, 221);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.Size = new System.Drawing.Size(148, 22);
+            this.txt_user.TabIndex = 1;
             // 
             // Nombre
             // 
@@ -357,10 +357,10 @@
         private System.Windows.Forms.ComboBox cbo_rol;
         private System.Windows.Forms.TextBox txt_cclave;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_clave;
-        private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.TextBox txt_user;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.MaskedTextBox txt_cedula;
         private System.Windows.Forms.Label label1;
