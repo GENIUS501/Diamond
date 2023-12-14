@@ -151,16 +151,16 @@ namespace AccesoDatos
                 .Select(x => new EUsuario
                 {
                     ID_Usuario = x.ID_Usuario,
+                    Cedula = x.Cedula,
                     Nombre = x.Nombre,
-                    Nombre_Usuario = x.Nombre_Usuario,
                     Primer_Apellido = x.Primer_Apellido,
                     Segundo_Apellido = x.Segundo_Apellido,
+                    Nombre_Usuario = x.Nombre_Usuario,
                     //Genero = x.Genero,
                     Id_Rol = x.Id_Rol,
                     Estado = x.Estado,
                     Contrasena = x.Contrasena,
                     Telefono = x.Telefono,
-                    Cedula = x.Cedula,
                     Correo = x.Correo
                 }).ToList();
                 return Lista;

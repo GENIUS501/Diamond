@@ -107,18 +107,17 @@ namespace AccesoDatos
             {
                 List<EDevoluciones> Lista = new List<EDevoluciones>();
                 var Objbd = db.Tab_Devoluciones.ToList();
-                foreach (var Item in Objbd)
+                Lista = Objbd.Select(Item => new EDevoluciones
                 {
-                    Lista.Add(new EDevoluciones()
-                    {
-                        CantidadProducto = Item.CantidadProducto,
-                        IDCliente = Item.IDCliente,
-                        FechaDevolucion = Item.FechaDevolucion,
-                        IdDevolucion = Item.IdDevolucion,
-                        IdUsuario = Item.IdUsuario,
-                        IdVenta = Item.IdVenta
-                    });
-                }
+                    CantidadProducto = Item.CantidadProducto,
+                    IDCliente = Item.IDCliente,
+                    FechaDevolucion = Item.FechaDevolucion,
+                    IdDevolucion = Item.IdDevolucion,
+                    IdUsuario = Item.IdUsuario,
+                    IdVenta = Item.IdVenta,
+                    Monto = (int)db.Tab_Venta.Where(c => c.Numero_factura == Item.IdVenta).FirstOrDefault().Total
+                }).ToList();
+
                 return Lista;
             }
             catch (Exception ex)

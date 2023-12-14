@@ -14,5 +14,6 @@ namespace Entidades
         public System.DateTime FechaDevolucion { get; set; }
         public double CantidadProducto { get; set; }
         public int IdUsuario { get; set; }
+        public int Monto { get; set; }
     }
 }

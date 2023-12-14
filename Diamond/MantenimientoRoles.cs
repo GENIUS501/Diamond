@@ -35,7 +35,6 @@ namespace Diamond
                         ERoles Rol = new ERoles();
                         Int32 FilasAfectadas = 0;
                         Rol.Nombre_Rol = this.txt_nombre_perfil.Text;
-                        Rol.Descripcion = this.txt_nombre_perfil.Text;
                         if (Accion == "A")
                         {
                             FilasAfectadas = Negocios.Agregar(Rol, Usuario);
