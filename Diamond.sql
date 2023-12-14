@@ -127,4 +127,4 @@ INSERT INTO Tab_Permisos (Modulo, Accion, Id_Rol) VALUES
 ('Productos', 'Consultar', 1)
 
 INSERT INTO Tab_Usuarios (Cedula,Nombre,Primer_Apellido,Segundo_Apellido, Nombre_Usuario, Contrasena,Telefono,Correo,Id_Rol, Estado)
-VALUES ('123456789', 'Albert','Soto','Jiménez', 'Administrador1', 'HVEvEz0I1wRgOshEmHhas82xZwI=',12345678,'1@1.com',1,1)
+VALUES ('123456789', 'Stephanie','Oviedo','Jiménez', 'Administrador1', 'HVEvEz0I1wRgOshEmHhas82xZwI=',12345678,'1@1.com',1,1)
