@@ -169,6 +169,7 @@
             this.Reporte_Producto.Name = "Reporte_Producto";
             this.Reporte_Producto.Size = new System.Drawing.Size(210, 22);
             this.Reporte_Producto.Text = "Reporte de devoluciones";
+            this.Reporte_Producto.Click += new System.EventHandler(this.Reporte_Producto_Click);
             // 
             // Reporte_Venta
             // 

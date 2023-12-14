@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteDevoluciones));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_fecha = new System.Windows.Forms.Button();
@@ -40,17 +39,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtnumerofactura = new System.Windows.Forms.MaskedTextBox();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(12, 142);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(776, 296);
-            this.reportViewer1.TabIndex = 112;
             // 
             // pictureBox1
             // 
@@ -90,6 +82,7 @@
             this.btn_fecha.Size = new System.Drawing.Size(25, 20);
             this.btn_fecha.TabIndex = 61;
             this.btn_fecha.UseVisualStyleBackColor = true;
+            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
             // 
             // txt_fecha_fin
             // 
@@ -146,6 +139,7 @@
             this.button1.Size = new System.Drawing.Size(25, 20);
             this.button1.TabIndex = 50;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btn_buscar_fact_click);
             // 
             // txtnumerofactura
             // 
@@ -154,6 +148,15 @@
             this.txtnumerofactura.Name = "txtnumerofactura";
             this.txtnumerofactura.Size = new System.Drawing.Size(113, 22);
             this.txtnumerofactura.TabIndex = 49;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Lienzos.ReporteDevoluciones.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(3, 122);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(798, 325);
+            this.reportViewer1.TabIndex = 112;
             // 
             // ReporteDevoluciones
             // 
@@ -168,6 +171,7 @@
             this.Name = "ReporteDevoluciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteDevoluciones";
+            this.Load += new System.EventHandler(this.ReporteDevoluciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -176,8 +180,6 @@
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_fecha;
@@ -188,5 +190,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox txtnumerofactura;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
