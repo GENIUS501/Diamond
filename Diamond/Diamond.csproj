@@ -282,6 +282,7 @@
     <EmbeddedResource Include="ReporteClientes.resx">
       <DependentUpon>ReporteClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDevoluciones.rdlc" />
     <EmbeddedResource Include="ReporteDevoluciones.resx">
       <DependentUpon>ReporteDevoluciones.cs</DependentUpon>
     </EmbeddedResource>
