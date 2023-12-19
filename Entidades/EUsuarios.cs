@@ -16,7 +16,7 @@ namespace Entidades
         public string Nombre_Usuario { get; set; }
         public int Id_Rol { get; set; }
         public string Contrasena { get; set; }
-        public int Estado { get; set; }
+      //  public int Estado { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
     }

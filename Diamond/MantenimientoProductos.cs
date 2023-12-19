@@ -18,6 +18,8 @@ namespace Diamond
         public int Usuario { get; set; }
         public string Accion { get; set; }
         public int Id { get; set; }
+        bool ImagenNueva = true;
+        byte[] imgDataglobal = null;
         public MantenimientoProductos()
         {
             InitializeComponent();
@@ -68,6 +70,7 @@ namespace Diamond
             this.txtCantidad.Text = Obj.Cantidad.ToString();
             if (Obj.Imagen != null)
             {
+                imgDataglobal = Obj.Imagen;
                 byte[] imgData = Obj.Imagen;
                 Image newImage = null;
                 using (MemoryStream ms = new MemoryStream(imgData, 0, imgData.Length))
@@ -77,6 +80,7 @@ namespace Diamond
                 }
                 ImgProducto.Image = newImage;
                 newImage = null;
+                ImagenNueva = false;
             }
         }
 
@@ -87,6 +91,7 @@ namespace Diamond
             {
                 this.txtRutaImagen.Text = dlgImagen.FileName;
                 ImgProducto.Load(this.txtRutaImagen.Text);
+                ImagenNueva = true;
             }
         }
         private bool validar()
@@ -159,10 +164,14 @@ namespace Diamond
                         Obj.ID_Tipo_Producto = int.Parse(this.cbo_tipo_productos.SelectedValue.ToString());
                         Obj.Cantidad = int.Parse(this.txtCantidad.Text);
                         Obj.Precio = int.Parse(this.txtPrecio.Text);
-                        if (this.txtRutaImagen.Text != "")
+                        if (this.txtRutaImagen.Text != "" && ImagenNueva)
                         {
                             byte[] data = System.IO.File.ReadAllBytes(txtRutaImagen.Text);
                             Obj.Imagen = data;
+                        }
+                        else if(Accion=="M")
+                        {
+                            Obj.Imagen = imgDataglobal;
                         }
                         Int32 FilasAfectadas = 0;
                         #region Agregar

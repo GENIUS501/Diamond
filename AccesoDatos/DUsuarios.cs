@@ -158,7 +158,7 @@ namespace AccesoDatos
                     Nombre_Usuario = x.Nombre_Usuario,
                     //Genero = x.Genero,
                     Id_Rol = x.Id_Rol,
-                    Estado = x.Estado,
+                 //   Estado = x.Estado,
                     Contrasena = x.Contrasena,
                     Telefono = x.Telefono,
                     Correo = x.Correo
@@ -189,7 +189,7 @@ namespace AccesoDatos
                     Segundo_Apellido = x.Segundo_Apellido,
                     //Genero = x.Genero,
                     Id_Rol = x.Id_Rol,
-                    Estado = x.Estado,
+                    //Estado = x.Estado,
                     Contrasena = x.Contrasena
                 }).Where(x => x.Nombre_Usuario == User && x.Contrasena == Pass).FirstOrDefault();
                 return Obj;
