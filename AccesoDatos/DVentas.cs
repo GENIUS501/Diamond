@@ -84,6 +84,10 @@ namespace AccesoDatos
                 using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                 {
                     var Objbd = db.Tab_Productos.Where(x => x.ID_Producto == Id_Producto).FirstOrDefault();
+                    if ((Objbd.Cantidad - 1) <= 0)
+                    {
+                        throw new Exception("No hay suficientes existencias del producto: "+Objbd.Nombre);
+                    }
                     Objbd.Cantidad = Objbd.Cantidad - 1;
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();
