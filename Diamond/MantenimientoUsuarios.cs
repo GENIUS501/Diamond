@@ -29,13 +29,13 @@ namespace Diamond
             EUsuario Obj = new EUsuario();
             Obj = Negocios.Mostrar().Where(x => x.ID_Usuario == Id).FirstOrDefault();
             this.txt_cedula.Text = Obj.Cedula.ToString();
-            this.txt_user.Text = Obj.Nombre;
+            this.txt_nombre.Text = Obj.Nombre;
             this.txt_apellido1.Text = Obj.Primer_Apellido;
             this.txt_apellido2.Text = Obj.Segundo_Apellido;
             this.txt_correo.Text = Obj.Correo;
             this.txt_telefono.Text = Obj.Telefono.ToString();
             this.txt_clave.Text = "********";
-            this.txt_nombre.Text = Obj.Nombre_Usuario;
+            this.txt_user.Text = Obj.Nombre_Usuario;
             this.cbo_rol.SelectedValue = Obj.Id_Rol;
             UsuarioViniente = Obj.Nombre_Usuario;
         }
@@ -49,14 +49,14 @@ namespace Diamond
                     errorProvider1.SetError(this.txt_cedula, "Formato de cedula invalido.");
                     ok = true;
                 }
-                if (this.txt_nombre.Text == "")
-                {
-                    errorProvider1.SetError(this.txt_nombre, "Debe ingresar el nombre de usuario");
-                    ok = true;
-                }
                 if (this.txt_user.Text == "")
                 {
-                    errorProvider1.SetError(this.txt_user, "Debe ingresar el nombre");
+                    errorProvider1.SetError(this.txt_user, "Debe ingresar el nombre de usuario");
+                    ok = true;
+                }
+                if (this.txt_nombre.Text == "")
+                {
+                    errorProvider1.SetError(this.txt_nombre, "Debe ingresar el nombre");
                     ok = true;
                 }
                 if (this.txt_apellido1.Text == "")
@@ -128,7 +128,7 @@ namespace Diamond
                     errorProvider1.SetError(this.cbo_rol, "Debe seleccionar un rol");
                     ok = true;
                 }
-                if (this.txt_nombre.Text != UsuarioViniente && Accion == "M" && this.txt_clave.Text == "********")
+                if (this.txt_user.Text != UsuarioViniente && Accion == "M" && this.txt_clave.Text == "********")
                 {
                     errorProvider1.SetError(this.txt_clave, "Debe cambiar la clave necesariamente si cambia el usuario.");
                     ok = true;
@@ -147,13 +147,13 @@ namespace Diamond
             try
             {
                 errorProvider1.SetError(txt_cedula, "");
-                errorProvider1.SetError(txt_user, "");
+                errorProvider1.SetError(txt_nombre, "");
                 errorProvider1.SetError(txt_apellido1,"");
                 errorProvider1.SetError(txt_apellido2, "");
                 errorProvider1.SetError(txt_clave, "");
                 errorProvider1.SetError(txt_cclave, "");
                 errorProvider1.SetError(txt_correo, "");
-                errorProvider1.SetError(txt_nombre, "");
+                errorProvider1.SetError(txt_user, "");
                 errorProvider1.SetError(cbo_rol, "");
             }
             catch (Exception ex)
@@ -178,20 +178,20 @@ namespace Diamond
                         NUsuarios Negocios = new NUsuarios();
                         EUsuario Obj = new EUsuario();
                         Obj.Cedula = this.txt_cedula.Text;
-                        Obj.Nombre_Usuario = this.txt_nombre.Text;
-                        Obj.Nombre = this.txt_user.Text;
+                        Obj.Nombre_Usuario = this.txt_user.Text;
+                        Obj.Nombre = this.txt_nombre.Text;
                         Obj.Primer_Apellido = this.txt_apellido1.Text;
                         Obj.Segundo_Apellido = this.txt_apellido2.Text;
                         Obj.Id_Rol = int.Parse(this.cbo_rol.SelectedValue.ToString());
                         Obj.Correo = this.txt_correo.Text;
                         Obj.Telefono = this.txt_telefono.Text;
                         //Obj.Correo = this.txt_correo.Text;
-                        Obj.Nombre = this.txt_user.Text;
+                        Obj.Nombre = this.txt_nombre.Text;
                         Int32 FilasAfectadas = 0;
                         #region Agregar
                         if (Accion == "A")
                         {
-                            Obj.Contrasena = Helper.EncodePassword(string.Concat(this.txt_nombre.Text.ToString(), this.txt_clave.ToString()));
+                            Obj.Contrasena = Helper.EncodePassword(string.Concat(this.txt_user.Text.ToString(), this.txt_clave.ToString()));
                             FilasAfectadas = Negocios.Agregar(Obj, Usuario);
                             if (FilasAfectadas > 0)
                             {
@@ -210,9 +210,9 @@ namespace Diamond
                         {
                             Obj.ID_Usuario = Id;
                             Obj.Contrasena = this.txt_clave.Text;
-                            if (this.txt_clave.Text != "********" || this.txt_nombre.Text != UsuarioViniente)
+                            if (this.txt_clave.Text != "********" || this.txt_user.Text != UsuarioViniente)
                             {
-                                Obj.Contrasena = Helper.EncodePassword(string.Concat(this.txt_nombre.Text.ToString(), this.txt_clave.ToString()));
+                                Obj.Contrasena = Helper.EncodePassword(string.Concat(this.txt_user.Text.ToString(), this.txt_clave.ToString()));
                             }
                             FilasAfectadas = Negocios.Modificar(Obj, Usuario);
                             MessageBox.Show("Usuario modificado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);

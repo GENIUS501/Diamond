@@ -80,7 +80,7 @@ namespace Diamond
                 }
                 if (this.txtDireccion.Text == "")
                 {
-                    errorProvider1.SetError(this.txt_nombre, "Debe ingresar la direccion");
+                    errorProvider1.SetError(this.txtDireccion, "Debe ingresar la direccion");
                     ok = true;
                 }
                 if (this.txt_correo.Text == "")
