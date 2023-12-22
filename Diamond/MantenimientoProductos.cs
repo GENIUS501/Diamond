@@ -28,6 +28,7 @@ namespace Diamond
         {
             try
             {
+                this.txt_id.Enabled = false;
                 NTipo_Producto NegociosTipoProducto = new NTipo_Producto();
                 this.cbo_tipo_productos.DisplayMember = "Text";
                 this.cbo_tipo_productos.ValueMember = "Value";

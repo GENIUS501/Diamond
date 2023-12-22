@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace Diamond
@@ -210,16 +211,28 @@ namespace Diamond
                     }
                     //  Entidad_Ventas.Impuesto = double.Parse(this.txt_impuesto.Text);
                     Entidad_Ventas.Total = Total;
-                    foreach (var Item in Productos)
+                    using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                     {
-                        Detalle.Add(new EVentas_Detalles
+                        try
                         {
-                            ID_Producto = Item.ID_Producto,
-                            Numero_factura = 0,
-                            Linea = linea
-                        });
-                        Negocios.Afectar_Inventario(Item.ID_Producto);
-                        linea++;
+                            foreach (var Item in Productos)
+                            {
+                                Detalle.Add(new EVentas_Detalles
+                                {
+                                    ID_Producto = Item.ID_Producto,
+                                    Numero_factura = 0,
+                                    Linea = linea
+                                });
+                                Negocios.Afectar_Inventario(Item.ID_Producto);
+                                linea++;
+                            }
+                            Ts.Complete();
+                        }
+                        catch (Exception ex)
+                        {
+                            Ts.Dispose();
+                            throw ex;
+                        }
                     }
                     int FilasAfectadas = Negocios.Agregar(Entidad_Ventas, Detalle, Usuario);
                     if (FilasAfectadas > 0)

@@ -81,25 +81,25 @@ namespace AccesoDatos
         {
             try
             {
-                using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-                {
+                //using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                //{
                     var Objbd = db.Tab_Productos.Where(x => x.ID_Producto == Id_Producto).FirstOrDefault();
                     var Comprobacion = Objbd.Cantidad;
-                    if ((Comprobacion - 1) <= 0)
+                    if (Comprobacion <= 0)
                     {
                         throw new Exception("No hay suficientes existencias del producto: "+Objbd.Nombre);
                     }
                     Objbd.Cantidad = Objbd.Cantidad - 1;
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();
-                    if (Resultado > 0)
-                    {
-                        Ts.Complete();
-                        return Resultado;
-                    }
-                    Ts.Dispose();
+                //    if (Resultado > 0)
+                //    {
+                //        Ts.Complete();
+                //        return Resultado;
+                //    }
+                //    Ts.Dispose();
                     return Resultado;
-                }
+                //}
             }
             catch (Exception ex)
             {
